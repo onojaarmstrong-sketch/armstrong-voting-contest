@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101b2c">
+    <meta name="description" content="Cast a vote in the Who Will Date Armstrong contest and follow the live results.">
+    <title>Who Will Date Armstrong? — The Vote</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="The Armstrong Vote home">
+        <span class="brand-mark">A<span>.</span></span>
+        <span>THE ARMSTRONG VOTE</span>
+      </a>
+      <a class="top-link" href="#dashboard">Live results <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="live-dot"></span> THE PEOPLE DECIDE</p>
+          <h1>WHO WILL<br>DATE <span>ARMSTRONG?</span></h1>
+          <p class="hero-intro">One question. Your vote. Follow every vote as the story unfolds.</p>
+          <a class="primary-link" href="#vote">Cast your vote <span aria-hidden="true">↓</span></a>
+        </div>
+        <aside class="prize-card" aria-label="Contest prize">
+          <span class="prize-label">THE PRIZE</span>
+          <strong>20<span>M</span></strong>
+          <span class="prize-caption">WINNER TAKES 20 MILLION</span>
+          <span class="prize-note">Prize currency and terms to be confirmed before launch.</span>
+        </aside>
+        <div class="hero-stamp" aria-hidden="true">YOUR<br>VOTE<br>COUNTS</div>
+      </section>
+
+      <section class="ticker" aria-label="Contest information">
+        <span>YOUR VOICE, YOUR CHOICE</span><i>✳</i>
+        <span>FOLLOW THE LIVE COUNT</span><i>✳</i>
+        <span>YOUR VOICE, YOUR CHOICE</span><i>✳</i>
+        <span>FOLLOW THE LIVE COUNT</span>
+      </section>
+
+      <section class="content-section" id="vote">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">01 / MAKE IT COUNT</p>
+            <h2>Pick your person.</h2>
+          </div>
+          <p class="section-note">Choose one entrant. One vote per browser in this demo.</p>
+        </div>
+        <div id="entrant-list" class="entrant-grid" aria-live="polite">
+          <p class="loading">Loading entrants…</p>
+        </div>
+        <p id="vote-message" class="vote-message" role="status" aria-live="polite"></p>
+      </section>
+
+      <section class="dashboard-section" id="dashboard">
+        <div class="section-heading dashboard-heading">
+          <div>
+            <p class="eyebrow">02 / THE LIVE PICTURE</p>
+            <h2>Watch it move.</h2>
+          </div>
+          <span class="refresh-status"><span class="live-dot"></span> UPDATES EVERY 5 SECONDS</span>
+        </div>
+        <div class="dashboard-grid">
+          <article class="total-card">
+            <span class="metric-label">TOTAL VOTES</span>
+            <strong id="total-votes">—</strong>
+            <span class="metric-foot">Recorded in this demo</span>
+          </article>
+          <article class="leader-card">
+            <span class="metric-label">CURRENT LEADER</span>
+            <strong id="leader-name">Waiting for votes</strong>
+            <span class="metric-foot" id="leader-share">The standings update automatically</span>
+          </article>
+          <article class="results-card">
+            <div class="card-title-row">
+              <span class="metric-label">VOTE BREAKDOWN</span>
+              <span class="small-label">SHARE</span>
+            </div>
+            <div id="results-list" class="results-list">
+              <p class="loading">Results will appear here.</p>
+            </div>
+          </article>
+          <article class="activity-card">
+            <div class="card-title-row">
+              <span class="metric-label">RECENT ACTIVITY</span>
+              <span class="small-label">LATEST VOTES</span>
+            </div>
+            <div id="activity-list" class="activity-list">
+              <p class="loading">Waiting for the first vote.</p>
+            </div>
+          </article>
+        </div>
+        <p class="dashboard-disclaimer">Demo analytics show aggregate totals and timestamps only. They are not independently audited.</p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>THE ARMSTRONG VOTE <span class="footer-dot">✳</span></span>
+      <span>Demo prototype · Confirm entrant consent, eligibility, prize currency and official rules before launch.</span>
+    </footer>
+  </body>
+</html>
