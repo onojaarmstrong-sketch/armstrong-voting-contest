@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#152a24">
+    <meta name="description" content="Meet the contestants, cast your vote, and follow the live Armstrong contest leaderboard.">
+    <title>Who’s Armstrong’s Match? — The People’s Pick</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="The Armstrong Vote home">
+        <span class="brand-mark">A<span>✳</span></span>
+        <span>ARMSTRONG’S MATCH</span>
+      </a>
+      <nav class="top-nav" aria-label="Main navigation">
+        <a class="top-link" href="#vote">The contestants</a>
+        <a class="top-link top-link-live" href="#dashboard"><span class="live-dot"></span> Live results <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="live-dot"></span> THE PEOPLE’S PICK · 2026</p>
+          <h1>WHO’S<br>ARMSTRONG’S<br><span>MATCH?</span></h1>
+          <p class="hero-intro">Three contestants. One big question. Meet the lineup, make your pick, and watch the leaderboard change live.</p>
+          <a class="primary-link" href="#vote">Cast your vote <span aria-hidden="true">↓</span></a>
+        </div>
+        <aside class="hero-feature" aria-label="Contest overview">
+          <span class="feature-kicker">THE LINEUP</span>
+          <div class="feature-portraits" aria-hidden="true">
+            <img src="/portraits/jessica.svg" alt="">
+            <img src="/portraits/loveth.svg" alt="">
+            <img src="/portraits/peace.svg" alt="">
+          </div>
+          <strong>3 contestants.<br><span>Make it count.</span></strong>
+          <span class="feature-note">Your vote. Their moment.</span>
+        </aside>
+        <div class="hero-stamp" aria-hidden="true">THE<br>PEOPLE’S<br>PICK <span>✳</span></div>
+      </section>
+
+      <section class="ticker" aria-label="Contest information">
+        <span>MEET THE LINEUP</span><i>✳</i>
+        <span>ONE VOTE PER BROWSER</span><i>✳</i>
+        <span>FOLLOW THE LIVE COUNT</span><i>✳</i>
+        <span>THE PEOPLE DECIDE</span>
+      </section>
+
+      <section class="content-section" id="vote">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">01 / MEET THE CONTESTANTS</p>
+            <h2>And your pick is…</h2>
+          </div>
+          <p class="section-note">Choose your favorite. You can cast one vote from this browser.</p>
+        </div>
+        <div id="entrant-list" class="entrant-grid" aria-live="polite">
+          <p class="loading">Loading entrants…</p>
+        </div>
+        <p id="vote-message" class="vote-message" role="status" aria-live="polite"></p>
+      </section>
+
+      <section class="dashboard-section" id="dashboard">
+        <div class="section-heading dashboard-heading">
+          <div>
+            <p class="eyebrow">02 / THE LIVE LEADERBOARD</p>
+            <h2>The numbers don’t lie.</h2>
+          </div>
+          <span class="refresh-status"><span class="live-dot"></span> LIVE · REFRESHES EVERY 5 SECONDS</span>
+        </div>
+        <div class="dashboard-grid">
+          <article class="total-card">
+            <span class="metric-label">TOTAL VOTES</span>
+            <strong id="total-votes">—</strong>
+            <span class="metric-foot">Votes counted so far</span>
+          </article>
+          <article class="leader-card">
+            <span class="metric-label">CURRENT LEADER</span>
+            <strong id="leader-name">Waiting for votes</strong>
+            <span class="metric-foot" id="leader-share">The standings update automatically</span>
+          </article>
+          <article class="results-card">
+            <div class="card-title-row">
+              <span class="metric-label">VOTE BREAKDOWN</span>
+              <span class="small-label">SHARE</span>
+            </div>
+            <div id="results-list" class="results-list">
+              <p class="loading">Results will appear here.</p>
+            </div>
+          </article>
+          <article class="activity-card">
+            <div class="card-title-row">
+              <span class="metric-label">RECENT ACTIVITY</span>
+              <span class="small-label">LATEST VOTES</span>
+            </div>
+            <div id="activity-list" class="activity-list">
+              <p class="loading">Waiting for the first vote.</p>
+            </div>
+          </article>
+        </div>
+        <p class="dashboard-disclaimer">Results refresh automatically. This demo stores votes on the host computer and is not an independently audited contest.</p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>ARMSTRONG’S MATCH <span class="footer-dot">✳</span></span>
+      <span>Illustrated portraits · Replace with approved photos and contest rules before launch.</span>
+    </footer>
+  </body>
+</html>
