@@ -1,0 +1,10 @@
+{
+  "name": "armstrong-voting-contest",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A local prototype for the Who Will Date Armstrong voting contest",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  }
+}
